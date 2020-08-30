@@ -1,0 +1,100 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ asset('assets') }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="{{ asset('assets') }}/js/vendor/bootstrap.min.js"></script>
+<script src="{{ asset('assets') }}/js/plugins.js"></script>
+<script src="{{ asset('assets') }}/js/main.js"></script>
+<script>
+    var MAPBOX_ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN';
+    var MAPBOX_STYLE_ID = 'YOUR_STYLE_ID';
+    var MAPBOX_USERNAME = 'YOUR_USERNAME';
+
+    var viewer = new Cesium.Viewer('cesiumContainer');
+    var layers = viewer.imageryLayers;
+
+    // Mapbox api url
+    var url = 'https://api.mapbox.com/styles/v1/' + MAPBOX_USERNAME + '/' + MAPBOX_STYLE_ID + '/tiles/256/{z}/{x}/{y}?access_token=' + MAPBOX_ACCESS_TOKEN;
+
+    var customImageryProvider = new Cesium.UrlTemplateImageryProvider({
+        url : url
+    });
+    layers.addImageryProvider(customImageryProvider);
+
+    $(viewer._animation.container).css('visibility', 'hidden'); // animation gizler
+    $(viewer._timeline.container).css('visibility', 'hidden'); // timeline gizler
+
+    viewer.forceResize();
+
+    var credit = new Cesium.Credit('abc', '../images/facility.gif', 'http://www.cesiumjs.org');
+
+    viewer.scene.frameState.creditDisplay.destroy(); // logo'yu siler
+
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0NTJlMjdlOC1mZjY4LTQyZGYtODI0Ny1kNTExMWQwODg1NzEiLCJpZCI6MjU3MjIsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1ODY0MzM2MzF9.YRoG0lFWMCY4S8JOdvr4zds00pDH3istImAhOb64O34';
+
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+            imageryProviderViewModels: providerViewModels,
+        },
+
+            );
+
+
+
+
+
+
+
+
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow1", function () {
+            $('#myModal1').modal('show')
+        })
+    });
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow2", function () {
+            $('#myModal2').modal('show')
+        })
+    });
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow3", function () {
+            $('#myModal3').modal('show')
+        })
+    });
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow4", function () {
+            $('#myModal4').modal('show')
+        })
+    });
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow5", function () {
+            $('#myModal5').modal('show')
+        })
+    });
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow6", function () {
+            $('#myModal6').modal('show')
+        })
+    })
+    $(document).ready(function () {
+        $(document).on("click", "#modalshow7", function () {
+            $('#myModal7').modal('show')
+        })
+    })
+
+
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", "#addtarget", function () {
+            $('#addtarget').modal('show')
+        })
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,488 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}IC Project{% endblock %}
+
+    {% block body %}
+<div class="overlay"></div>
+
+
+<section class="cd-hero">
+   -
+
+
+        <div id="cesiumContainer"  class="fullSize">
+            <div class="cd-slider-nav" >
+                <nav>
+                    <span class="cd-marker item-1"></span>
+                    <ul>
+
+                        <li id="modalshow1" ><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/radio_icon.png"></div><h6>Radios</h6></a></li>
+                        <li id="modalshow2"><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/about-icon.png"></div><h6>Session</h6></a></li>
+                        <li id="modalshow3"><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/featured-icon.png"></div><h6>Netmon</h6></a></li>
+                        <li id="modalshow4"><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/projects-icon.png"></div><h6>Target</h6></a></li>
+                        <li id="modalshow5"><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/mission-location.png"></div><h6>Mission-Location</h6></a></li>
+                        <li id="modalshow6"><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/contact-icon.png"></div><h6>Voice Call/sms</h6></a></li>
+                        <li id="modalshow7"><a href="#0"><div class="image-icon"><img src="{{ asset('assets') }}/img/history-icon.png"></div><h6>History</h6></a></li>
+
+
+                    </ul>
+                </nav>
+            </div> <!-- .cd-slider-nav -->
+        </div>
+
+
+
+        <div class="modal fade bd-example-modal-lg" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Radio Devices</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                                    <div class="btn-group" style="height: 100px; width: 800px">
+                                        <button style="width: 10%; height: 80%"> BTS1 </button  >
+                                        <button style="width: 10%; height: 80%"> BTS2 </button>
+                                        <button style="width: 10%; height: 80%"> BTS3 </button>
+                                        <button style="width: 10%; height: 80%"> BTS4 </button>
+                                        <button style="width: 10%; height: 80%"> BTS5 </button>
+                                        <button style="width: 10%; height: 80%"> BTS6 </button>
+                                        <button style="width: 10%; height: 80%"> BTS7 </button>
+                                        <button style="width: 10%; height: 80%"> BTS8 </button>
+                                    </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Session</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                                                <thead>
+                                                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 294px;">Gen</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 369px;">Action</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 318px;">Identities</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">Hit Count</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 190px;">Radio</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">Locations</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">TA\Distance</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">Date</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr role="row" class="odd">
+                                                    <td class="sorting_1">LTE</td>
+                                                    <td>ALLOW</td>
+                                                    <td>286015239942065</td>
+                                                    <td>1</td>
+                                                    <td>BTS1</td>
+                                                    <td>location_1</td>
+                                                    <td>2(156-234m)</td>
+                                                    <td>07.04.2020 17:01:12</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">UMTS</td>
+                                                    <td>ALLOW</td>
+                                                    <td>286016834262753,35325...</td>
+                                                    <td>1</td>
+                                                    <td>BTS2</td>
+                                                    <td>location_1</td>
+                                                    <td>107-146m</td>
+                                                    <td>07.03.2020 11:06:47</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">UMTS</td>
+                                                    <td>ALLOW</td>
+                                                    <td>286015603874849,35660...</td>
+                                                    <td>1</td>
+                                                    <td>BTS2</td>
+                                                    <td>location_1</td>
+                                                    <td>107-146m</td>
+                                                    <td>07.04.2020 10:59:16</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">LTE</td>
+                                                    <td>ALLOW</td>
+                                                    <td>286016258234085</td>
+                                                    <td>1</td>
+                                                    <td>BTS2</td>
+                                                    <td>location_1</td>
+                                                    <td>1(78-156m)</td>
+                                                    <td>31.03.2020 11:50:02</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">LTE</td>
+                                                    <td>ALLOw</td>
+                                                    <td>286016832143007,86803...</td>
+                                                    <td>1</td>
+                                                    <td>BTS1</td>
+                                                    <td>location_1</td>
+                                                    <td>1(78-156m)</td>
+                                                    <td>31.03.2020 11:49:38</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">UMTS</td>
+                                                    <td>ALLOW</td>
+                                                    <td>286015860150639,35662</td>
+                                                    <td>1</td>
+                                                    <td>BTS2</td>
+                                                    <td>location_1</td>
+                                                    <td>87-126m</td>
+                                                    <td>31.03.2020 11:18:00</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">UMTS</td>
+                                                    <td>ALLOW</td>
+                                                    <td>286016227746204,35376...</td>
+                                                    <td>1</td>
+                                                    <td>BTS2</td>
+                                                    <td>location_1</td>
+                                                    <td>234-273m</td>
+                                                    <td>31.03.2020 11:01:06</td>
+                                               </tbody>
+
+                                            </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+
+                    </div>
+                    <div class="modal-footer left">
+                        <button type="button" class="btn btn-primary" >LAC</button>
+                        <button type="button" class="btn btn-warning">TIMSI</button>
+                        <button type="button" class="btn btn-success">TA</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-example-modal-lg" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Spectrum</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+                        <script src="assets/js/canvasjs.min.js"></script>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade bd-example-modal-lg"  id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Target</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="btn-group-sm">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Target</button><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="box box-primary">
+                                                <div class="box-header">
+                                                    <h3 class="box-title"></h3>
+                                                </div>
+                                                <div class="box-body">
+                                                    <!-- Date -->
+                                                    <div class="form-group">
+                                                        <label>Name:</label>
+
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="datepicker">
+                                                        </div>
+                                                        <!-- /.input group -->
+                                                    </div>
+                                                    <!-- /.form group -->
+
+                                                    <!-- Date range -->
+                                                    <div class="form-group">
+                                                        <label>IMSI:</label>
+
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-address-card"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="reservation">
+                                                        </div>
+                                                        <!-- /.input group -->
+                                                    </div>
+                                                    <!-- /.form group -->
+                                                    <div class="col-sm-6">
+                                                        <div class="dataTables_length" id="example1_length">
+                                                            <label>Action
+                                                                <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                                                                    <option value="10">2G:HOLD</option>
+                                                                    <option value="25">3G:HOLD</option>
+                                                                    <option value="50">4G:HOLD</option>
+                                                                </select>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-info">Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger">Export</button>
+                            <button type="button" class="btn btn-danger">Import</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-example-modal-lg" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mission-Location</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ..............
+                        <div data-v-a810a436="" data-v-0c6d2649="" class="" style="grid-area: 3 / 1 / span 1 / span 1; z-index: 1000;">
+                            <div data-v-a810a436="" class="el-card is-always-shadow" style="overflow-y: auto; width: 100%; height: 100%;">
+                                <div class="el-card__header"><div data-v-a810a436="" style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div data-v-0c6d2649="" style="white-space: nowrap; overflow-x: auto;"><span data-v-0c6d2649="">Mission / Location</span>
+                                            <div data-v-0c6d2649="" class="el-divider el-divider--vertical"><!---->
+                                            </div>
+                                            <span data-v-0c6d2649="">
+     Current Mission: default
+    </span>
+                                            <div data-v-0c6d2649="" class="el-divider el-divider--vertical"><!----></div>
+                                            <span data-v-0c6d2649="">
+     Current Location: location_1
+    </span>
+                                        </div>
+                                        <div data-v-a810a436="" style="display: flex; justify-content: right; align-items: center;">
+                                            <div data-v-a810a436="" class="el-color-picker el-color-picker--small" style="margin-right: 1em;"><!----><div class="el-color-picker__trigger">
+                                                    <span class="el-color-picker_color"><span class="el-color-picker_color-inner" style="background-color: rgb(68, 68, 68);"></span><!----></span>
+                                                    <span class="el-color-picker__icon el-icon-arrow-down"></span>
+                                                </div>
+                                                <div class="el-color-dropdown el-color-picker__panel" style="display: none;">
+                                                    <div class="el-color-dropdown__main-wrapper"><div class="el-color-hue-slider is-vertical" style="float: right;">
+                                                            <div class="el-color-hue-slider__bar"></div>
+                                                            <div class="el-color-hue-slider__thumb" style="left: 0px; top: 0px;"></div>
+                                                        </div>
+                                                        <div class="el-color-svpanel" style="background-color: rgb(255, 0, 0);"><div class="el-color-svpanel_white"></div><div class="el-color-svpanel_black">
+
+                                                            </div>
+                                                            <div class="el-color-svpanel__cursor" style="top: 0px; left: 0px;"><div>
+
+                                                                </div>
+                                                            </div></div></div><!----><!----><div class="el-color-dropdown_btns"><span class="el-color-dropdownvalue"><div class="el-input el-input--mini"><!----><input type="text" autocomplete="off" class="el-inputinner"><!----><!----><!----><!----></div></span><button type="button" class="el-button el-color-dropdown_link-btn el-button--text el-button--mini"><!----><!----><span>
+        Clear
+      </span></button><button type="button" class="el-button el-color-dropdown__btn el-button--default el-button--mini is-plain"><!----><!----><span>
+        OK
+      </span></button></div></div></div><button data-v-a810a436="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-4412" tabindex="0"><!----><i class="el-icon-close"></i><!----></button></div></div></div><div class="el-card_body"><div data-v-0c6d2649="" class="el-row el-row--flex" style="margin-left: -5px; margin-right: -5px;"><div data-v-0c6d2649="" class="el-col el-col-12" style="padding-left: 5px; padding-right: 5px;"><div data-v-0c6d2649="" class="el-table el-table--fit el-table--enable-row-hover el-table--enable-row-transition"><div class="hidden-columns"><div data-v-0c6d2649=""></div><div data-v-0c6d2649=""></div></div><div class="el-tableheader-wrapper"><table cellspacing="0" cellpadding="0" border="0" class="el-tableheader" style="width: 890px;"><colgroup><col name="el-table_2_column_13" width="445"><col name="el-table_2_column_14" width="445"><col name="gutter" width="0"></colgroup><thead class="has-gutter"><tr class=""><th colspan="1" rowspan="1" class="el-table_2_column_13     is-leaf"><div class="cell">Mission</div></th><th colspan="1" rowspan="1" class="el-table_2_column_14  is-right   is-leaf"><div class="cell"></div></th><th class="gutter" style="width: 0px; display: none;"></th></tr></thead></table></div><div class="el-tablebody-wrapper is-scrolling-none"><table cellspacing="0" cellpadding="0" border="0" class="el-tablebody" style="width: 890px;"><colgroup><col name="el-table_2_column_13" width="445"><col name="el-table_2_column_14" width="445"></colgroup><tbody><tr class="el-table_row selected-mission-location"><td rowspan="1" colspan="1" class="el-table_2_column_13  "><div class="cell el-tooltip" style="width: 443px;"><div data-v-0c6d2649="" class="cell">
+                                                                        default
+                                                                    </div></div></td><td rowspan="1" colspan="1" class="el-table_2_column_14 is-right "><div class="cell"><!----><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-6695" tabindex="0"><!----><i class="el-icon-edit"></i><span>
+                Edit
+              </span></button><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-239" tabindex="0" style="display: none;"><!----><i class="el-icon-delete"></i><span>
+                Delete
+              </span></button></div></td></tr><!----></tbody></table><!----><!----></div><!----><!----><!----><!----><div class="el-table__column-resize-proxy" style="display: none;"></div></div><div data-v-0c6d2649="" style="text-align: center; margin-top: 1em;"><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-403" tabindex="0"><!----><i class="el-icon-plus"></i><span>
+            Add Mission
+          </span></button><!----></div></div><div data-v-0c6d2649="" class="el-col el-col-12" style="padding-left: 5px; padding-right: 5px;"><div data-v-0c6d2649="" class="el-table el-table--fit el-table--enable-row-hover el-table--enable-row-transition"><div class="hidden-columns"><div data-v-0c6d2649=""></div><div data-v-0c6d2649=""></div></div><div class="el-table_header-wrapper"><table cellspacing="0" cellpadding="0" border="0" class="el-tableheader" style="width: 890px;"><colgroup><col name="el-table_3_column_15" width="445"><col name="el-table_3_column_16" width="445"><col name="gutter" width="0"></colgroup><thead class="has-gutter"><tr class=""><th colspan="1" rowspan="1" class="el-table_3_column_15     is-leaf"><div class="cell">Location</div></th><th colspan="1" rowspan="1" class="el-table_3_column_16  is-right   is-leaf"><div class="cell"></div></th><th class="gutter" style="width: 0px; display: none;"></th></tr></thead></table></div><div class="el-tablebody-wrapper is-scrolling-none"><table cellspacing="0" cellpadding="0" border="0" class="el-tablebody" style="width: 890px;"><colgroup><col name="el-table_3_column_15" width="445"><col name="el-table_3_column_16" width="445"></colgroup><tbody><tr class="el-table_row selected-mission-location"><td rowspan="1" colspan="1" class="el-table_3_column_15  "><div class="cell el-tooltip" style="width: 443px;"><div data-v-0c6d2649="" class="cell">
+                                                                        location_1
+                                                                    </div></div></td><td rowspan="1" colspan="1" class="el-table_3_column_16 is-right "><div class="cell"><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-1088" tabindex="0" style="display: none;"><!----><i class="el-icon-check"></i><span>
+                Select
+              </span></button><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-1566" tabindex="0"><!----><i class="el-icon-edit"></i><span>
+                Edit
+              </span></button><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-4673" tabindex="0" style="display: none;"><!----><i class="el-icon-delete"></i><span>
+                Delete
+              </span></button></div></td></tr><!----></tbody></table><!----><!----></div><!----><!----><!----><!----><div class="el-table__column-resize-proxy" style="display: none;"></div></div><div data-v-0c6d2649="" style="text-align: center; margin-top: 1em;"><button data-v-0c6d2649="" type="button" class="el-button el-tooltip el-button--default el-button--mini" aria-describedby="el-tooltip-2014" tabindex="0"><!----><i class="el-icon-plus"></i><span>
+            Add Location
+          </span></button><!----></div></div></div></div></div></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-example-modal-lg" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Voice Call/SMS</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-example-modal-lg" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">History</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                                            <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 294px;">Gen</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 369px;">Action</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 318px;">Identities</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">Hit Count</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 190px;">Radio</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">Locations</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">TA\Distance</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 256px;">Date</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">LTE</td>
+                                                <td>ALLOW</td>
+                                                <td>286015239942065</td>
+                                                <td>1</td>
+                                                <td>BTS1</td>
+                                                <td>location_1</td>
+                                                <td>2(156-234m)</td>
+                                                <td>07.04.2020 17:01:12</td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">UMTS</td>
+                                                <td>ALLOW</td>
+                                                <td>286016834262753,35325...</td>
+                                                <td>1</td>
+                                                <td>BTS2</td>
+                                                <td>location_1</td>
+                                                <td>107-146m</td>
+                                                <td>07.03.2020 11:06:47</td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="sorting_1">UMTS</td>
+                                                <td>ALLOW</td>
+                                                <td>286015603874849,35660...</td>
+                                                <td>1</td>
+                                                <td>BTS2</td>
+                                                <td>location_1</td>
+                                                <td>107-146m</td>
+                                                <td>07.04.2020 10:59:16</td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">LTE</td>
+                                                <td>ALLOW</td>
+                                                <td>286016258234085</td>
+                                                <td>1</td>
+                                                <td>BTS2</td>
+                                                <td>location_1</td>
+                                                <td>1(78-156m)</td>
+                                                <td>31.03.2020 11:50:02</td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="sorting_1">LTE</td>
+                                                <td>ALLOw</td>
+                                                <td>286016832143007,86803...</td>
+                                                <td>1</td>
+                                                <td>BTS1</td>
+                                                <td>location_1</td>
+                                                <td>1(78-156m)</td>
+                                                <td>31.03.2020 11:49:38</td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="sorting_1">UMTS</td>
+                                                <td>ALLOW</td>
+                                                <td>286015860150639,35662</td>
+                                                <td>1</td>
+                                                <td>BTS2</td>
+                                                <td>location_1</td>
+                                                <td>87-126m</td>
+                                                <td>31.03.2020 11:18:00</td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">UMTS</td>
+                                                <td>ALLOW</td>
+                                                <td>286016227746204,35376...</td>
+                                                <td>1</td>
+                                                <td>BTS2</td>
+                                                <td>location_1</td>
+                                                <td>234-273m</td>
+                                                <td>31.03.2020 11:01:06</td>
+                                            </tbody>
+
+                                        </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
+                        </div>
+                        <!-- /.box-body -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    {% endblock %}

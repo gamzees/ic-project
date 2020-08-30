@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block head %}{% include('home/head.html.twig') %}{% endblock %}
+
+{% block body %}{% endblock %}
+{% block footer %}{% include('home/footer.html.twig') %}{% endblock %}
+{% block javascripts %}{% include('home/javascripts.html.twig') %}{% endblock %}
+</body>
+</html>
